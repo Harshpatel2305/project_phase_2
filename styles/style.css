@@ -1,0 +1,1632 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    background: crimson;
+}
+
+.heading h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.heading p {
+    color: #fff;
+    padding-top: 0.7rem;
+    font-size: 1.7rem;
+}
+
+.heading p a {
+    color: #fff;
+}
+
+.heading p a:hover {
+    color: #333;
+}
+
+.title {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2.8rem;
+    font-size: 1.7rem;
+    color: #333;
+    border: 0.2rem solid #333;
+    background: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+}
+
+.header .logo {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bolder;
+    margin-right: auto;
+}
+
+.header .navbar ul {
+    list-style: none;
+}
+
+.header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.header .navbar ul li:hover ul {
+    display: block;
+}
+
+.header .navbar ul li a {
+    font-size: 1.7rem;
+    color: #666;
+    padding: 2rem;
+    display: block;
+}
+
+.header .navbar ul li a:hover {
+    background: #eee;
+}
+
+.header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 20rem;
+    background: #fff;
+    display: none;
+}
+
+.header .navbar ul li ul li {
+    width: 100%;
+}
+
+.header .icons div,
+.header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover,
+.header .icons a:hover {
+    color: crimson;
+}
+
+.header .search-form {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    border-top: 0.2rem solid #333;
+    background: #fff;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.header .search-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.header .search-form input {
+    width: 100%;
+    height: 100%;
+    padding-right: 1rem;
+    font-size: 1.7rem;
+    color: #666;
+    text-transform: none;
+}
+
+.header .search-form label {
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.header .search-form label:hover {
+    color: crimson;
+}
+
+#menu-btn {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+}
+
+.home {
+    padding: 0;
+    position: relative;
+}
+
+.home .slide {
+    display: flex;
+    min-height: 60vh;
+    padding: 2rem 7%;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+.home .slide.active {
+    display: flex;
+}
+
+.home .slide .content span {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    animation: fadeIn 0.4s linear 0.2s backwards;
+}
+
+.home .slide .content h3 {
+    color: #333;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-size: 6rem;
+    animation: fadeIn 0.4s linear 0.4s backwards;
+}
+
+.home .slide .content .btn {
+    animation: fadeIn 0.4s linear 0.6s backwards;
+    border: #fff;
+}
+
+.home #next-slide,
+.home #prev-slide {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    height: 6rem;
+    width: 6rem;
+    line-height: 5.5rem;
+    font-size: 4rem;
+    color: #333;
+    border: 0.2rem solid #333;
+    background: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.home #next-slide:hover,
+.home #prev-slide:hover {
+    background: #333;
+    color: #fff;
+}
+
+.home #prev-slide {
+    right: 9rem;
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 1.5rem;
+}
+
+.banner .box {
+    position: relative;
+    height: 30rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.banner .box:hover img {
+    transform: scale(1.1);
+}
+
+.banner .box img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.banner .box .content {
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+}
+
+.banner .box .content span {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.banner .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.banner .box .content .btn {
+    padding: 0.6rem 2rem;
+    font-size: 1.5rem;
+}
+
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    border-radius: 0.5rem;
+    text-align: center;
+    border: 0.2rem solid #333;
+}
+
+.products .box-container .box:hover .image .icons {
+    transform: translateY(0);
+}
+
+.products .box-container .box .image {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+    width: 100%;
+}
+
+.products .box-container .box .image .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 0.2rem solid #333;
+    transform: translateY(-7rem);
+}
+
+.products .box-container .box .image .icons a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.products .box-container .box .image .icons a:hover {
+    background: #333;
+    color: #fff;
+}
+
+.products .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.products .box-container .box .content {
+    padding: 1.5rem 0;
+}
+
+.products .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.products .box-container .box .content .stars {
+    padding: 1rem 0;
+}
+
+.products .box-container .box .content .stars i {
+    font-size: 1.4rem;
+    color: crimson;
+}
+
+.products .box-container .box .content .price {
+    font-size: 2.2rem;
+    color: #333;
+}
+
+.products .box-container .box .content .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    color: #666;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.about .row .image {
+    flex: 1 1 42rem;
+}
+
+.about .row .image img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.about .row .content {
+    flex: 1 1 42rem;
+}
+
+.about .row .content h3 {
+    font-size: 3.5rem;
+    color: #333;
+    line-height: 2;
+}
+
+.about .row .content p {
+    font-size: 1.4rem;
+    line-height: 2.5;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.about .icons-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.about .icons-container .icons {
+    padding: 3rem 2rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #333;
+    text-align: center;
+    cursor: pointer;
+}
+
+.about .icons-container .icons:hover {
+    background: #333;
+}
+
+.about .icons-container .icons:hover img {
+    filter: invert(1);
+}
+
+.about .icons-container .icons:hover h3 {
+    color: #fff;
+}
+
+.about .icons-container .icons img {
+    height: 7rem;
+    margin-bottom: 1rem;
+}
+
+.about .icons-container .icons h3 {
+    font-size: 1.7rem;
+    color: #333;
+}
+
+.blogs .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 1.5rem;
+}
+
+.blogs .box-container .box {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 0.2rem solid #333;
+}
+
+.blogs .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+
+.blogs .box-container .box .image {
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.blogs .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.blogs .box-container .box .content {
+    padding: 2rem;
+}
+
+.blogs .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+    line-height: 2;
+}
+
+.blogs .box-container .box .content p {
+    font-size: 1.4rem;
+    line-height: 2.5;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.blogs .box-container .box .content .icons {
+    border-top: 0.2rem solid #333;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blogs .box-container .box .content .icons a {
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.blogs .box-container .box .content .icons a:hover {
+    color: crimson;
+}
+
+.blogs .box-container .box .content .icons a i {
+    padding-right: 0.5rem;
+    color: crimson;
+}
+
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact .row form {
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #333;
+}
+
+.contact .row form .box,
+.contact .row form textarea {
+    width: 100%;
+    border-bottom: 0.2rem solid #333;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: #666;
+    text-transform: none;
+}
+
+.contact .row form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.contact .row .map {
+    flex: 1 1 42rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.login-form form,
+.register-form form {
+    margin: 1rem auto;
+    max-width: 40rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-form form h3,
+.register-form form h3 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 0.7rem;
+}
+
+.login-form form .inputBox,
+.register-form form .inputBox {
+    margin: 1rem 0;
+    display: flex;
+    border-radius: 0.5rem;
+    background: #eee;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.login-form form .inputBox,
+.register-form form .inputBox,.register-form form .inputBox select {
+  margin: 1rem 0;
+  display: flex;
+  border-radius: 0.5rem;
+  background: #eee;
+  padding: 0.5rem 1rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-form form .inputBox span,
+.register-form form .inputBox span {
+    color: #666;
+    margin-left: 1rem;
+    font-size: 2rem;
+}
+
+.login-form form .inputBox input,
+.register-form form .inputBox input {
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    font-size: 1.5rem;
+    color: #666;
+    text-transform: none;
+}
+
+.login-form form .flex,
+.register-form form .flex {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+.login-form form .flex label,
+.register-form form .flex label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.login-form form .flex a,
+.register-form form .flex a {
+    font-size: 1.5rem;
+    color: 0;
+    margin-left: auto;
+}
+
+.login-form form .flex a:hover,
+.register-form form .flex a:hover {
+    color: crimson;
+}
+
+.login-form form input[type=submit],
+.register-form form input[type=submit] {
+    background: #333;
+    color: #fff;
+}
+
+.login-form form input[type=submit]:hover,
+.register-form form input[type=submit]:hover {
+    background: crimson;
+}
+
+.login-form form .btn,
+.register-form form .btn {
+    width: 100%;
+}
+
+.shopping-cart .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.shopping-cart .box-container .box {
+    border-radius: 0.5rem;
+    border: 0.2rem solid #333;
+    padding: 3rem 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.shopping-cart .box-container .box .fa-times {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.shopping-cart .box-container .box .fa-times:hover {
+    color: crimson;
+}
+
+.shopping-cart .box-container .box img {
+    height: 10rem;
+}
+
+.shopping-cart .box-container .box .content h3 {
+    font-size: 1.7rem;
+    padding-bottom: 0.5rem;
+    color: #333;
+}
+
+.shopping-cart .box-container .box .content form {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.shopping-cart .box-container .box .content form span {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.shopping-cart .box-container .box .content form input {
+    width: 8rem;
+    font-size: 1.5rem;
+    color: #666;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #eee;
+}
+
+.shopping-cart .box-container .box .content .price {
+    font-size: 2rem;
+    color: #333;
+}
+
+.shopping-cart .box-container .box .content .price span {
+    color: #666;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.shopping-cart .cart-total {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #333;
+}
+
+.shopping-cart .cart-total h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.shopping-cart .cart-total h3 span {
+    color: crimson;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3 {
+    font-size: 2.2rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover {
+    color: crimson;
+}
+
+.footer .box-container .box a:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box-container .box a i {
+    color: crimson;
+    padding-right: 0.5rem;
+}
+
+.footer .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.footer .box-container .box form input[type=email] {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+    background: #eee;
+    font-size: 1.6rem;
+    text-transform: none;
+    margin: 0.5rem 0;
+}
+
+.footer .credit {
+    text-align: center;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    color: #666;
+    border-top: 0.2rem solid #333;
+}
+
+.footer .credit span {
+    color: crimson;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 0 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header {
+        padding: 2rem;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar ul li {
+        width: 100%;
+    }
+
+    .header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    .header .navbar ul li ul li a {
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .slide .content h3 {
+        font-size: 3rem;
+    }
+
+    .shopping-cart .box-container .box {
+        flex-flow: column;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+/* General Styles */
+
+body {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #f0f0f0;
+    overflow-x: hidden;
+
+}
+
+/* Top Navbar Styles  */
+
+#top {
+
+    background: #555555;
+    padding: 10px 0;
+
+}
+
+#top .offer {
+    color: #fff;
+}
+
+#top .offer .btn {
+
+    text-transform: uppercase;
+
+}
+
+@media (max-width: 991px) {
+
+    #top .offer {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    #top {
+        font-size: 12px;
+        text-align: center;
+    }
+
+}
+
+#top a {
+
+    color: #fff;
+
+}
+
+#top ul.menu {
+
+    padding-top: 5px;
+
+    margin: 0;
+    text-align: right;
+    font-size: 12px;
+    list-style: none;
+
+}
+
+@media (max-width: 991px) {
+
+    #top ul.menu {
+        text-align: center;
+    }
+
+}
+
+#top ul.menu>li {
+
+    display: inline-block;
+
+}
+
+#top ul.menu>li a {
+
+    color: #eeeeee;
+
+}
+
+#top ul.menu>li+li:before {
+    content: "|\00a0";
+    padding: 0 5px;
+    color: #f7f7f7;
+
+}
+
+/* Header Styles */
+
+.navbar {
+    background: white;
+
+}
+
+.navbar-collapse .right {
+    float: right;
+}
+
+.navbar-brand {
+    float: left;
+    padding: 10px 15px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 70px;
+}
+
+.navbar-brand:hover,
+.navbar-brand:focus {
+    text-decoration: none;
+}
+
+.navbar ul.nav>li>a {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+.padding-nav {
+    padding-top: 10px;
+}
+
+.navbar ul.nav>li>a:hover {
+    background: #e7e7e7;
+}
+
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 191, 168);
+    border-color: rgb(65, 179, 156);
+}
+
+#search .navbar-form {
+    float: right;
+}
+
+#search {
+
+    clear: both;
+    border-top: solid 1px #9adacd;
+    text-align: right;
+
+}
+
+#search .navbar-form .input-group {
+    display: table;
+
+}
+
+#search .navbar-form .input-group .form-control {
+    width: 100%;
+
+}
+
+/* Slider Styles  */
+
+#slider {
+
+    margin-bottom: 40px;
+
+}
+
+/* Advantages Styles */
+
+.box {
+    /*background: #fff;*/
+    margin: 0 0 30px;
+    /*border: solid 1px #e6e6e6;*/
+    box-sizing: border-box;
+    padding: 20px;
+    /*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);*/
+
+
+}
+
+#advantages {
+    text-align: center;
+}
+
+#advantages .box .icon {
+    position: absolute;
+    font-size: 120px;
+    width: 100%;
+    text-align: center;
+    top: -20px;
+    left: 0;
+    height: 100%;
+    float: left;
+    color: #eeeeee;
+    transition: all 0.2s ease-out;
+    z-index: 1;
+    box-sizing: border-box;
+
+}
+
+#advantages .box h3 {
+    position: relative;
+    margin: 0 0 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    z-index: 2;
+
+}
+
+#advantages .box h3 a:hover {
+    text-decoration: none;
+}
+
+#advantages .box p {
+    position: relative;
+    color: #555555;
+    z-index: 2;
+
+}
+
+
+/* Products Styles  */
+
+#hot h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    color: #4993e4;
+    font-weight: 100;
+    text-align: center;
+
+}
+
+#content {
+    padding-left: 25px;
+
+}
+
+.single {
+    width: 290px;
+}
+
+@media (max-width: 768px) {
+
+    .single {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+}
+
+#content .product {
+    background: #fff;
+    border: solid 1px #e6e6e6;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+#content .product .text p.price {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+
+}
+
+#content .product .text .buttons {
+    clear: both;
+    text-align: center;
+}
+
+#content .product .text h3 {
+    text-align: center;
+    font-size: 20px;
+
+}
+
+#content .product .text h3 a {
+
+    color: rgb(85, 85, 85);
+}
+
+#content .product .text {
+    padding: 10px 10px 0px;
+}
+
+#content .product .text .buttons .btn {
+    margin-bottom: 10px;
+}
+
+/*  Breadcrumb Styles  */
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.breadcrumb>li+li:before {
+    content: ">\00a0";
+    color: #cccccc;
+
+}
+
+@media (max-width: 991px) {
+
+    .breadcrumb {
+        padding: 8px 0;
+        text-align: center;
+    }
+
+}
+
+/* products categories and categories styles */
+
+#content .panel.sidebar-menu {
+
+    box-sizing: border-box;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#content .panel.sidebar-menu ul.nav.category-menu {
+    margin-bottom: 20px;
+}
+
+#content .panel.sidebar-menu ul.nav.category-menu li a {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#content .panel.sidebar-menu h3 {
+    padding: 5px 0;
+    margin: 0;
+}
+
+
+/* Shop Products Styles */
+
+@media (max-width: 768px) {
+
+    .center-responsive {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .center-responsive {
+        width: 95%;
+        margin: 0 auto;
+
+    }
+
+
+}
+
+
+/* Details Styles */
+
+#content #productMain {
+
+    margin-bottom: 30px;
+
+}
+
+#content #productMain .price {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+#content #mainImage {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+#content #thumbs a {
+    display: block;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    border: solid 2px transparent;
+}
+
+#content .headline {
+    height: 350px;
+}
+
+
+/* Cart page Styles */
+
+#content #cart .table tbody tr td img {
+    width: 50px;
+}
+
+#content #cart .table tbody tr td input {
+    width: 40px;
+    text-align: right;
+
+}
+
+#content #cart .table tbody tr td {
+    vertical-align: middle;
+
+}
+
+#content #cart .table tfoot {
+    font-size: 18px;
+}
+
+.box .box-footer {
+    background: #f7f7f7;
+    margin: 30px -20px -20px;
+    padding: 20px;
+    border-top: solid 1px #eeeeee;
+
+}
+
+.box .box-footer:before,
+.box .box-footer:after {
+    content: " ";
+    display: table;
+}
+
+.box .box-footer:after {
+    clear: both;
+}
+
+.box .box-header {
+    background: #f7f7f7;
+    margin: -20px -20px 20px;
+    padding: 20px;
+    border-bottom: solid 1px #eeeeee;
+
+}
+
+#content #order-summary table {
+    margin-top: 20px;
+
+}
+
+#content #order-summary table td {
+    color: #999999;
+}
+
+#content #order-summary table tr.total td,
+#content #order-summary table tr.total th {
+    font-size: 18px;
+    color: #555555;
+    font-weight: 700;
+
+}
+
+
+
+
+/* Footer Styles */
+
+#footer {
+    background: #e0e0e0;
+    padding: 20px 0;
+}
+
+#footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#footer ul a {
+    color: #999999;
+    padding: 20px 0;
+}
+
+#footer .social {
+    text-align: left;
+}
+
+#footer .social a {
+    margin: 0 10px 0 0;
+    color: #fff;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    line-height: 30px;
+    font-size: 15px;
+    text-align: center;
+    transition: all 0.2s ease-out;
+    vertical-align: bottom;
+    background-color: #555555;
+}
+
+#copyright {
+
+    background: #333;
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 12px;
+
+}
+
+#copyright p {
+    margin: 0;
+}
+
+
+/** Filter Styles **/
+
+.nav.category-menu {
+    margin-top: -21px;
+}
+
+
+.scroll-menu {
+    height: 260px;
+    overflow-y: scroll;
+}
+
+.checkbox span {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+
+.checkbox span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 0;
+    margin-left: -20px;
+    border: 2px solid #cccccc;
+    border-radius: 3px;
+    background-color: #fff;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.checkbox span::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #555555;
+
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+
+.checkbox input[type="checkbox"]:focus+span::before {
+
+    outline: thin dotted;
+    outline: 5px auto;
+    outline-offset: -2px;
+
+}
+
+.checkbox input[type="checkbox"]:checked+span::after {
+
+    font-family: "FontAwesome";
+
+    content: "\f00c";
+
+}
+
+.checkbox-primary input[type="checkbox"]:checked+span::before {
+
+    background-color: #337ab7;
+
+    border-color: #337ab7;
+
+}
+
+.checkbox-primary input[type="checkbox"]:checked+span::after {
+
+    color: #fff;
+
+}
+
+
+
+
+/* Label Styles  */
+
+
+.label {
+
+    text-decoration: none;
+
+    position: absolute;
+
+    top: 50px;
+
+    padding-left: 51px;
+
+    z-index: 20;
+
+}
+
+
+.label .label-background {
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.label .thelabel {
+
+    position: relative;
+    width: 100px;
+    padding: 6px 50px 6px 15px;
+    margin: 40px 50px 10px -71px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #337ab7;
+    text-shadow: 0px 1px 2px #bbb;
+
+}
+
+.label .thelabel:before,
+.label .thelabel:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.label .thelabel:after {
+    left: 0px;
+    top: 100%;
+    border-width: 5px 10px;
+    border-style: solid;
+    border-color: #2d7b6b #2d7b6b transparent transparent;
+}
+
+.label.sale {
+    top: 0;
+
+}
+
+/* tick and cross icons styles */
+
+
+.tick1 {
+    font-size: 18px !important;
+    color: red;
+}
+
+.cross1 {
+    font-size: 18px !important;
+    color: red;
+}
+
+.tick2 {
+    font-size: 18px !important;
+    color: red;
+}
+
+.cross2 {
+    font-size: 18px !important;
+    color: red;
+}
+
+/* Password Strength Checker Styles */
+
+#meter_wrapper {
+    border: 1px solid grey;
+    width: 202px;
+    height: 20px;
+    margin: 0;
+    border-radius: 3px;
+
+}
+
+
+#meter {
+    width: 0px;
+    height: 18px;
+    border-radius: 2px;
+
+}
+
+
+#pass_type {
+    font-size: 15px;
+    margin-top: 10px;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    margin-bottom: 10%;
+    color: grey;
+
+}
+
+
+
+/* Services Styles  */
+
+
+.services .col-md-4 {
+
+    margin-left: 3%;
+
+    width: 29%;
+
+}
+
+@media(max-width: 1000px) {
+
+    .services .col-md-4 {
+
+        margin-left: 2%;
+
+        width: 46%;
+
+    }
+
+}
+
+
+@media(max-width: 800px) {
+
+    .services .col-md-4 {
+
+        width: 90%;
+
+    }
+
+
+}
